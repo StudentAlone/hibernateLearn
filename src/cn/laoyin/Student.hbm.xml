@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!-- JavaBean与对应的表名 -->
+    <class name="cn.laoyin.Student" table="STUDENT">
+        <!-- 主键 -->
+        <id name="sid" type="int">
+            <column name="SID" />
+            <!-- assigned:自己指定id，需要自动生成时:native or IDENTITY
+            	主键生成策略(auto default )还有：uuid sequence 
+            	可查看官方文档
+              -->
+            <generator class="assigned" />
+        </id>
+        <!-- 字段 -->
+        <!-- type 查官方文档类型的对应关系 -->
+        <property name="sname" type="java.lang.String">
+            <column name="SNAME" />
+        </property>
+        <!-- 字段 -->
+        <property name="gender" type="java.lang.String">
+            <column name="GENDER" />
+        </property>
+        <!-- 字段 -->
+        <property name="birthday" type="java.util.Date">
+            <column name="BIRTHDAY" />
+        </property>
+        <!-- 字段 -->
+        <property name="address" type="java.lang.String">
+            <column name="ADDRESS" />
+        </property>
+    </class>
+</hibernate-mapping>
