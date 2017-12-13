@@ -1,4 +1,4 @@
-package RelationalMapping.OneToOne;
+package RelationalMapping.ManyToMany;
 
 
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ import org.junit.Test;
 
 
 
-public class OneToManyTest {
+public class ManyToManyTest {
 	 private static SessionFactory sessionFactory;
 	 @BeforeClass
 	 public static void beforeClass() {
@@ -33,25 +33,6 @@ public class OneToManyTest {
 	  sessionFactory.close();
 	 }
 	 
-    public void testotm() {
-    	 Session session = sessionFactory.getCurrentSession();
-  	    session.beginTransaction();
-    	Phone phone3 = new Phone("3");
-    	Phone phone4 = new Phone("4");
-    	Phone phone5 = new Phone("5");
-    	
-    	List<Phone> plist=new ArrayList<Phone>();
-    	plist.add(phone3);
-    	plist.add(phone4);
-    	plist.add(phone5);
-    	
-    	Person person = new Person();
-    	person.setId(3L);
-    	person.setPhones(plist);
- 		
- 		session.getTransaction().commit();
-    	
-    }
     
 	@Test
 	public void scameex() {

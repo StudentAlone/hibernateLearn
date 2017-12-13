@@ -1,4 +1,4 @@
-package RelationalMapping.OneToOne;
+package RelationalMapping.OneToMany;
 
 import java.util.List;
 
@@ -6,6 +6,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -19,6 +20,7 @@ public class Person {
 	    @GeneratedValue
 	    private Long id;
 	    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	    @JoinColumn(name="Personid")
 	    private List<Phone> phones =null;
 
 	    public Person() {

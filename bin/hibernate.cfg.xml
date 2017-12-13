@@ -45,8 +45,12 @@
       <!--   联合主键映射 -->
        <!--  <mapping class="RelationalMapping.one2one_uni_fk_composite.Husband" />
         <mapping class="RelationalMapping.one2one_uni_fk_composite.Wife" /> -->
-        <!-- 组件映射 -->
+        <!-- 组件映射 
         <mapping class="RelationalMapping.componentMapping.Husband"/>
-       <!--  <mapping class="RelationalMapping.componentMapping.Wife"/> -->
+       -->
+    	
+    	<!-- ManyToMany 双向关联 
+    	<mapping  class="RelationalMapping.ManyToMany.Student"  />
+    	<mapping  class="RelationalMapping.ManyToMany.Teacher"  />-->
     </session-factory>
 </hibernate-configuration>
